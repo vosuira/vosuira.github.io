@@ -1,30 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="VOSUIRA">
+<Layout title="vosuira">
 	<main>
-		<h1><span class="text-gradient">VOSOOORAH</span></h1>
+		<h1><span class ="text-gradient">vosuira</span><span class="role">i script stuff</span></h1>
+		<div class="status-indicator">
+			<span class="status-dot"></span>
+			<span class="status-text">online</span>
+		</div>
 	</main>
 </Layout>
 
 <style>
+	html, body {
+	    overflow: hidden; /* Disables scroll bar for the whole page */
+	}
 	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
 		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+		background-color: #0d0d0d;
+		font-family: Arial, sans-serif;
 	}
 	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
+		font-size: 2.5rem;
+		margin: 0.5rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.highlight {
+		color: #58a6ff;
+	}
+	.role {
+		font-size: 1.2rem;
+		color: #aaa;
+	}
+	.status-indicator {
+		display: flex;
+		align-items: center;
+		margin: 1rem 0;
+		padding: 0.5rem;
+		border-radius: 8px; /* Adjusted for less roundness */
+		background-color: #161515;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -33,28 +55,24 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	.status-dot {
+		height: 10px;
+		width: 10px;
+		background-color: #4CAF50;
+		border-radius: 50%;
+		margin-right: 0.5rem;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+	.status-text {
+		font-size: 1rem;
+		color: #aaa;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
+	.social-links {
+		display: flex;
+		gap: 10px;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+	.icon-placeholder {
+		font-size: 2rem; /* Placeholder for actual icons */
+		text-decoration: none;
+		color: #58a6ff; /* Adjust color to match your design */
 	}
 </style>
